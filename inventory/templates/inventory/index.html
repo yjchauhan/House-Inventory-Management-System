@@ -1,0 +1,28 @@
+{% extends 'inventory/base.html' %}
+{% block content %}
+
+    <h1> Welcome to Home Inventory</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Item name</th>
+                <th>Stock number</th>
+                <th>Location</th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in items  %}
+            <tr>
+                <td>{{ i.item_name}} </td>
+                <td>{{ i.stock_no}}</td>
+                <td>{{ i.location_id}}</td>
+                
+                <td></td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endblock  %}
